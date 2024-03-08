@@ -11,6 +11,7 @@ function main(firsts, seconds, types) {
 
     let type = types;
     console.log(first, second, type);
+    console.log(first, second, type);
     if (!first) {
         first = 0;
     }
@@ -64,6 +65,9 @@ numbers.forEach(num => {
         buttons.forEach(btn => {
             btn.classList.remove('active');
         })
+        if (tmp !== "") {
+            tmp = tmp.toString();
+        }
         tmp = tmp.concat(num.value);
         display.textContent = tmp;
     })
@@ -92,8 +96,8 @@ const equal = document.querySelector(".equal");
 
 equal.addEventListener("click", () => {
     second = tmp;
-    if (method === "0" && first === "") {
-        answer = second;
+    if (method === "" && first === "") {
+        answer = display.textContent;
     }
     else if (second === "") {
         answer = main(first, first_nosecond, method);
@@ -115,13 +119,32 @@ const clear = document.querySelector("#c");
 clear.addEventListener("click", () => {
     first = "";
     tmp = "";
+    method = "";
     second = "";
+    answer = "";
+    first_nosecond = "";
     display.textContent = "";
 })
 
 
+const point = document.querySelector("#dot");
+point.addEventListener("click", () => {
+    tmp = tmp.concat(".");
+    display.textContent = tmp;
 
+})
 
+const minus = document.querySelector("#minus");
+minus.addEventListener("click", () => {
+    tmp = tmp * -1
+    display.textContent = tmp;
+})
+
+const precent = document.querySelector("#precent");
+precent.addEventListener("click", () => {
+    tmp = tmp / 100;
+    display.textContent = tmp;
+})
 
 
 console.log(main());
