@@ -106,6 +106,7 @@ button:active {
     font-size: larger;
     align-items: center;
     justify-content: end;
+    flex-grow: 1;
 }
 
 .toggle-button.active {
@@ -117,4 +118,14 @@ button:active {
 
 button {
     font-size: larger;
+}
+
+
+.header {
+    display: flex;
+
+}
+
+.delete_wrap {
+    align-self: end;
 }

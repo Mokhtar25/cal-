@@ -71,16 +71,17 @@ numbers.forEach(num => {
         display.textContent = tmp;
     })
 })
-
-
+// turn off toggeled buttons
+function turn_off() {
+    buttons.forEach(btn => {
+        btn.classList.remove('active');
+    });
+}
 //
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         // Remove 'active' class from all buttons
-        buttons.forEach(btn => {
-            btn.classList.remove('active');
-        });
-
+        turn_off();
         method = button.value;
         first = display.textContent;
         first_nosecond = first;
@@ -124,6 +125,7 @@ clear.addEventListener("click", () => {
     answer = "";
     first_nosecond = "";
     display.textContent = "";
+    turn_off();
 })
 
 
@@ -145,6 +147,15 @@ precent.addEventListener("click", () => {
     tmp = tmp / 100;
     display.textContent = tmp;
 })
+
+const del = document.querySelector("#del");
+del.addEventListener("click", () => {
+    tmp = display.textContent;
+    tmp = tmp.toString();
+    tmp = tmp.slice(0, -1);
+    display.textContent = tmp;
+})
+
 
 
 console.log(main());
