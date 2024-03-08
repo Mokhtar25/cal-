@@ -1,0 +1,118 @@
+button {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: gray;
+    border-radius: 50%;
+    margin: 2px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.numbers {
+    width: 168px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#null {
+    flex-grow: 1;
+    border-radius: 5rem;
+    margin-top: 5px;
+    height: 50px;
+    justify-content: start;
+    padding: 0 20px;
+
+
+}
+
+.wrapper {
+    padding: 0 0;
+    margin: 0 0;
+    height: 100vh;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    background-color: black;
+    border: 10px solid black;
+    border-radius: 2rem;
+}
+
+.funcs {
+    display: flex;
+}
+
+.func:active {
+    background-color: white;
+}
+
+button:hover {
+    filter: brightness(125%);
+}
+
+button:active {
+    filter: brightness(170%);
+}
+
+.funcs button {
+    background-color: rgba(211, 211, 211, 0.887);
+    color: black;
+}
+
+.toggle-button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    color: white;
+    background-color: rgb(231, 160, 28);
+    cursor: pointer;
+}
+
+.dot {
+    font-size: 25px;
+    padding: 10px;
+    margin: 5px;
+    margin-right: 8px;
+}
+
+.equal {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    color: white;
+    background-color: rgb(231, 160, 28);
+    cursor: pointer;
+}
+
+.display {
+    height: 80px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.toggle-button.active {
+    background-color: white;
+    cursor: pointer;
+    color: rgb(231, 160, 28);
+    cursor: pointer;
+}
+
+button {
+    font-size: larger;
+}
