@@ -61,7 +61,6 @@ const buttons = document.querySelectorAll('.toggle-button');
 
 numbers.forEach(num => {
     num.addEventListener('click', () => {
-        display.textContent = "";
         buttons.forEach(btn => {
             btn.classList.remove('active');
         })
@@ -106,6 +105,7 @@ equal.addEventListener("click", () => {
     else {
         answer = main(first, second, method);
         first = answer;
+        tmp = "";
 
     }
 
